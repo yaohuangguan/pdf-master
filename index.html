@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f9" />
+  <meta name="description" content="PDF Master — a privacy-first PDF workspace. Edit and fill PDF forms, merge, split, organize and compress PDFs in your browser." />
+  <title>PDF Master — Edit, Fill, Merge & Compress PDFs</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="PDF Master home"><span class="brandmark"><span></span><span></span></span><span>PDF<span class="brand-bold">Master</span></span></a>
+      <div class="topbar-center">Your PDF workspace, simplified.</div>
+      <div class="topbar-right"><span class="privacy-indicator"><span class="privacy-dot"></span> Files stay in your browser</span><a class="github-link" target="_blank" rel="noopener" href="https://github.com/yaohuangguan/pdf-master" aria-label="GitHub repository">GitHub ↗</a></div>
+    </header>
+    <div class="workspace">
+      <aside class="rail" aria-label="PDF tools">
+        <div class="rail-title">WORKSPACE</div>
+        <button class="rail-item active" data-tool="edit" type="button"><span data-lucide="file-pen-line"></span><span>Edit & Fill</span></button>
+        <button class="rail-item" data-tool="merge" type="button"><span data-lucide="files"></span><span>Merge PDF</span></button>
+        <button class="rail-item" data-tool="split" type="button"><span data-lucide="scissors"></span><span>Split PDF</span></button>
+        <button class="rail-item" data-tool="compress" type="button"><span data-lucide="minimize-2"></span><span>Compress</span></button>
+        <button class="rail-item" data-tool="organize" type="button"><span data-lucide="layout-grid"></span><span>Organize</span></button>
+        <div class="rail-bottom"><span data-lucide="shield-check"></span> <span>Private by design<br/><small>No uploads. No account.</small></span></div>
+      </aside>
+      <main id="main" aria-live="off"></main>
+    </div>
+    <input id="file-input" type="file" accept="application/pdf,.pdf" hidden />
+    <input id="merge-file-input" type="file" accept="application/pdf,.pdf" multiple hidden />
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
